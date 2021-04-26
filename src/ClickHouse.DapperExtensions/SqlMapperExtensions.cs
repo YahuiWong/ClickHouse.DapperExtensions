@@ -443,12 +443,12 @@ namespace ClickHouse.DapperExtensions
                         }
                         else
                         {
-                            sbParameterList.AppendFormat("{0}", val);
+                            sbParameterList.AppendFormat("{0}", FixValue(val));
                         }
                     }
                     else
                     {
-                        sbParameterList.AppendFormat("'{0}'", val);
+                        sbParameterList.AppendFormat("'{0}'", FixValue(val));
                     }
 
                     if (i < allPropertiesExceptKeyAndComputed.Count - 1)
@@ -464,7 +464,14 @@ namespace ClickHouse.DapperExtensions
             var cmd = $"insert into {name} ({sbColumnList}) values {sbParameterList}";
             return cmd;
         }
-
+        private static string FixValue(object value)
+        {
+            if (!string.IsNullOrEmpty(value?.ToString()))
+            {
+                return value.ToString().Replace("'", "\\'");
+            }
+            return value?.ToString();
+        }
         /// <summary>
         /// Inserts an entity into table "Ts" and returns identity id or number of inserted rows if inserting a list.
         /// </summary>

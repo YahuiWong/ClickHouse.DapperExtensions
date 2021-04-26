@@ -4,13 +4,14 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <Authors>stulzq</Authors>
     <Description>ClickHouse bulk insert with Dapper.</Description>
-    <PackageProjectUrl>https://github.com/stulzq/ClickHouse.DapperExtensions</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/stulzq/ClickHouse.DapperExtensions.git</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/YahuiWong/ClickHouse.DapperExtensions</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/YahuiWong/ClickHouse.DapperExtensions.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>clickhouse,dapper,bulk</PackageTags>
-    <Version>0.1.0</Version>
+    <Version>0.1.2</Version>
     <PackageLicenseUrl>https://github.com/stulzq/ClickHouse.DapperExtensions/blob/master/LICENSE</PackageLicenseUrl>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageId>ClickHouse.DapperExtensions.YahuiWong</PackageId>
   </PropertyGroup>
 
   <ItemGroup>
